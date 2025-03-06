@@ -60,5 +60,5 @@ let anotherObj = myObj
 // change in any one obj will change ref so all two changes 
 anotherObj.email = "yash@gmail.com"
 
-//console.log(myObj) // both changed due to same ref 
+//console.log(myObj) // both changefd due to same ref 
 //console.log(anotherObj) //both changed due to same ref 
