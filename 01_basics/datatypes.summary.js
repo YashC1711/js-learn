@@ -31,3 +31,34 @@ const myfunction = function (){
 myfunction();
 
 // console.log(typeof(myfunction))
+
+
+
+
+
+// ***************************MEMORY************************************
+// 2types of memory 
+//1. Stack Memory (primitive data type) --> we get copy of variable 
+//2. Heap Memoruy (NonPremitive data type) --> we get reference
+
+let myName = "YashChinawale" // -> stack 
+let anotherName = myName  // copy of myName
+anotherName = "Chinawale"  // change in copy not change in og myName
+// console.log(myName) // so value of myName is same
+// console.log(anotherName) //changed because of change in copy
+
+// variable myObj is stored in stack with ref to data ie name and email in heap --> var myObj gets ref of heap memeory which has data 
+let myObj = {   
+    name:"Yash",
+    email:"y@g.com"
+}
+//now if another obj is assigned the value of myObj then it means that ref to heap memory is given 
+let anotherObj = myObj
+//console.log(myObj) // ref to heap memory
+//console.log(anotherObj) // ref to heap memory 
+
+// change in any one obj will change ref so all two changes 
+anotherObj.email = "yash@gmail.com"
+
+//console.log(myObj) // both changed due to same ref 
+//console.log(anotherObj) //both changed due to same ref 
